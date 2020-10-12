@@ -32,3 +32,7 @@ class freeUser extends User{
 var paymentUser1 = new paymentUser(1, "Mads", "Riber", 21, "Male", "madsriber8@gmail.com", "fisk123", "Frederiksberg", [], []);
 
 var freeUser1 = new freeUser (2, "Emilie", "Hansen", "22", "Female", "Emilie.hansen@gmail.com", "hest123", [], "Frederiksberg");
+
+var array = [paymentUser1, freeUser1];
+
+exports.myUsers = [array];

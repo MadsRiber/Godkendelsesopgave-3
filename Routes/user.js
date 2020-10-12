@@ -1,10 +1,9 @@
 const express = require("express");
 let router = express.Router();
+const Users = require("../Modules/user.js");
 
-router
-    .route("/")
-    .get((req, res) =>{
-        res.send("test igen")
+router.get("/", (req, res) =>{
+        res.json(Users.myUsers);
     })
     /*.post((req, res)=>{})
     .put((req, res)=>{})
