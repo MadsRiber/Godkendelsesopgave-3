@@ -1,5 +1,5 @@
 class image{
-    constructor(picture){
-        this.picture = picture
+    constructor(imageId){
+        this.imageId = imageId
     }
 }
