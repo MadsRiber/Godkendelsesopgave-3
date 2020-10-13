@@ -1,4 +1,3 @@
-const { Router } = require("express");
 const express = require("express");
 let router = express.Router();
 const interests = require("../Models/interests.js");
