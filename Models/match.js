@@ -1,5 +1,5 @@
 class match{
     constructor(matchId){
-        this.matchId
+        this.matchId = matchId;
     }
 }

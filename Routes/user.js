@@ -1,10 +1,10 @@
 const express = require("express");
 let router = express.Router();
-const Users = require("../Modules/user.js");
+const Users = require("../Models/user.js");
 
 router.get("/", (req, res) =>{
-        res.json(Users.myUsers);
-    })
+        res.json(Users.myUsers)
+    });
     /*.post((req, res)=>{})
     .put((req, res)=>{})
     .delete((req, res)=>{});*/

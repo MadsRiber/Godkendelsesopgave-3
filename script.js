@@ -2,6 +2,9 @@ const express = require("express")
 const app = express()
 const port = 3000
 const user = require("./Routes/user")
+const interests = require("./Routes/interests")
+
+app.use("/interests", interests);
 
 app.use("/user", user);
 

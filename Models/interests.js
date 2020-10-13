@@ -10,3 +10,5 @@ class interests{
 //Laver interesser for begge Users
 var interests1 = new interests("Female", "pop", "Sci-fi", "Basketball", "Italian");
 var interests2 = new interests("Male", "hip-hop", "Romantic", "Fodbold", "Greek");
+
+exports.myInterests = [interests1, interests2]
