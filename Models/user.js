@@ -23,19 +23,24 @@ class paymentUser extends User{
 }
 
 class freeUser extends User{
-    constructor(userId, firstName, lastName, age, gender, email, password, interests, location){
-        super(userId, firstName, lastName, age, gender, email, password, interests, location);
+    constructor(userId, firstName, lastName, age, gender, email, password, location, interests){
+        super(userId, firstName, lastName, age, gender, email, password, location, interests);
     }
 }
 
 const creditCard = require("./creditcard.js")
-const interests1 = require("./interests.js")
-const interests2 = require("./interests.js")
-// laver vores Users med nogle attributter
-var paymentUser1 = new paymentUser(1, "Mads", "Riber", 21, "Male", "madsriber8@gmail.com", "fisk123", "Frederiksberg", [interests1], creditCard);
+const interests = require("./interests.js")
 
-var freeUser1 = new freeUser (2, "Emilie", "Hansen", "22", "Female", "Emilie.hansen@gmail.com", "hest123", [interests2], "Frederiksberg");
+// laver vores Users med nogle attributter
+var paymentUser1 = new paymentUser(1, "Mads", "Riber", 21, "Male", "madsriber8@gmail.com", "fisk123", "Frederiksberg", [interests.interests1], creditCard);
+
+var freeUser1 = new freeUser (2, "Emilie", "Hansen", "22", "Female", "Emilie.hansen@gmail.com", "hest123", "Frederiksberg",  [interests.interests2]);
+
+var freeuser2 = new freeUser (4, "Hans", "Jensen", 22, "Male", "Hans@gmail.com", "dyr123", "Frederiksberg", [interests.interests3])
+
+var paymentUser2 = new paymentUser(3, "Jacob", "Hejbøl", 21, "Male", "Jacobhejbøl@gmail.com", "ko123", "Frederiksberg", [interests.interests4])
 
 exports.myUsers = [paymentUser1, freeUser1];
 exports.freeUsers = [freeUser1];
 exports.paymentUsers = [paymentUser1];
+exports.myUsersUpdated = [freeuser2, paymentUser2]
