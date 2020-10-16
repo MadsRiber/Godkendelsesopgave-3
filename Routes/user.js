@@ -7,7 +7,6 @@ const match = require("../Models/match.js")
 router.get("/", (req, res) =>{
         res.json(Users.myUsers)
     });
-
 router.get("/freeuser", (req, res)=>{
     res.json(Users.freeUsers)
 })
@@ -27,11 +26,4 @@ router.put("/", (req,res)=>{
 router.post("/", (req,res)=>{
     res.json({"message": "Users created"})
 })
-
-    /*.post((req, res)=>{})
-    .put((req, res)=>{})
-    .delete((req, res)=>{});*/
-
 module.exports = router;
-
-// Man kunne udvide match funktionen til først at se på kønnene og så efterfølgende kigge på interesser RAPPORT

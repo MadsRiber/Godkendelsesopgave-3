@@ -6,8 +6,6 @@ const interests = require("./Routes/interests");
 const match = require("./Routes/match");
 const fs = require("fs")
 const jwt = require("jsonwebtoken")
-//const freeUser = require("./Routes/user");
-//const paymentUser = require("./Routes/user")
 
 //Fortæller hvad der skal ske når man går ind på http://localhost:3000/interests
 //Vi fortæller at den skal hive fat i "interests" som refererer til min interests.js
@@ -15,13 +13,10 @@ const jwt = require("jsonwebtoken")
 app.use("/interests", interests);
 
 app.use("/user", user);
-//app.use("/user", freeUser)
-//app.use("/user", paymentUser)
 app.use("/match", match);
 
 app.get("/", (req, res)=>{
     res.send("Paths are /match /user /paymentuser /freeuser /interests")
-    //Handle Root
 });
 
 app.get("/password", isAuthorized, (req,res)=> {
