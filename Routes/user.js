@@ -3,7 +3,7 @@ let router = express.Router();
 const Users = require("../Models/user.js");
 const match = require("../Models/match.js")
 
-
+//CRUD for mine Users med endpoints for freeuser og paymentuser også
 router.get("/", (req, res) =>{
         res.json(Users.myUsers)
     });

@@ -1,3 +1,4 @@
+//Laver class for interests
 class interests{
     constructor(gender, music, movies, sports, food,){
         this.gender = gender;
@@ -7,11 +8,13 @@ class interests{
         this.food = food;
     }
 }
-//Laver interesser for Users
+//Hardcoder interests som jeg kan bruge i mine Users
 var interests1 = new interests("Female", "pop", "Sci-fi", "Basketball", "Italian");
 var interests2 = new interests("Male", "pop", "Romantic", "Fodbold", "Greek");
 var interests3 = new interests("Male", "country", "Romantic", "Fodbold", "Greek");
 var interests4 = new interests("Female", "EDM", "Sci-fi", "Basketball", "Spanish");
+
+//exporter mine interests
 exports.myInterests = [interests1, interests2]
 exports.interests1 = Object.values(interests1)
 exports.interests2 = Object.values(interests2)
